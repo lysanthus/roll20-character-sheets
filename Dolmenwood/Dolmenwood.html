@@ -27,7 +27,7 @@
 <div class="sheet-character">
   <div class="logo">
     <img
-      src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Old%20School%20Essentials%20-%20AAC/images/logo.png" />
+      src="https://raw.githubusercontent.com/lysanthus/roll20-character-sheets/master/Dolmenwood/images/logo.png" />
   </div>
   <div class="info-grid">
     <div class="infos">
@@ -110,7 +110,7 @@
     <div class="scores roll flex">
       <label class="inline-flex inline-flex-wide-label split-value">
         <button type="roll" name="attr_rollSTR"
-          value="&{template:less} {{roll=@{character_name} rolls ^{strength}}} {{result=[[ [[1d20]]<@{str}+@{optionalModQuery} ]]}} {{check=[[@{str}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} rolls ^{strength}}} {{result=[[ [[1d6cf1cs6]]+@{BonusSTR}+@{optionalModQuery} ]]}} {{check=[[4]]}} {{raw_roll=$[[0]]}}"
           data-i18n="strength-abbr">
           STR
         </button>
@@ -120,7 +120,7 @@
       </label>
       <label class="inline-flex inline-flex-wide-label split-value">
         <button type="roll" name="attr_rollINT"
-          value="&{template:less} {{roll=@{character_name} rolls ^{intelligence}}} {{result=[[ [[1d20]]<@{int}+@{optionalModQuery} ]]}} {{check=[[@{int}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} rolls ^{intelligence}}} {{result=[[ [[1d6cf1cs6]]+@{intMod}+@{optionalModQuery} ]]}} {{check=[[4]]}} {{raw_roll=$[[0]]}}"
           data-i18n="intelligence-abbr">
           INT
         </button>
@@ -130,7 +130,7 @@
       </label>
       <label class="inline-flex inline-flex-wide-label split-value">
         <button type="roll" name="attr_rollWIS"
-          value="&{template:less} {{roll=@{character_name} rolls ^{wisdom}}} {{result=[[ [[1d20]]<@{wis}+@{optionalModQuery} ]]}} {{check=[[@{wis}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} rolls ^{wisdom}}} {{result=[[ [[1d6cf1cs6]]+@{wisMod}+@{optionalModQuery} ]]}} {{check=[[4]]}} {{raw_roll=$[[0]]}}"
           data-i18n="wisdom-abbr">
           WIS
         </button>
@@ -140,7 +140,7 @@
       </label>
       <label class="inline-flex inline-flex-wide-label split-value">
         <button type="roll" name="attr_rollDEX"
-          value="&{template:less} {{roll=@{character_name} rolls ^{dexterity}}} {{result=[[ [[1d20]]<@{dex}+@{optionalModQuery} ]]}} {{check=[[@{dex}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} rolls ^{dexterity}}} {{result=[[ [[1d6cf1cs6]]+@{BonusDEX}+@{optionalModQuery} ]]}} {{check=[[4]]}} {{raw_roll=$[[0]]}}"
           data-i18n="dexterity-abbr">
           DEX
         </button>
@@ -150,7 +150,7 @@
       </label>
       <label class="inline-flex inline-flex-wide-label split-value">
         <button type="roll" name="attr_rollCON"
-          value="&{template:less} {{roll=@{character_name} rolls ^{constitution}}} {{result=[[ [[1d20]]<@{con}+@{optionalModQuery} ]]}} {{check=[[@{con}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} rolls ^{constitution}}} {{result=[[ [[1d6cf1cs6]]+@{HPConMod}+@{optionalModQuery} ]]}} {{check=[[4]]}} {{raw_roll=$[[0]]}}"
           data-i18n="constitution-abbr">
           CON
         </button>
@@ -160,7 +160,7 @@
       </label>
       <label class="inline-flex inline-flex-wide-label split-value">
         <button type="roll" name="attr_rollCHA"
-          value="&{template:less} {{roll=@{character_name} rolls ^{charisma}}} {{result=[[ [[1d20]]<@{cha}+@{optionalModQuery} ]]}} {{check=[[@{cha}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} rolls ^{charisma}}} {{result=[[ [[1d6cf1cs6]]+@{chaMod}+@{optionalModQuery} ]]}} {{check=[[4]]}} {{raw_roll=$[[0]]}}"
           data-i18n="charisma-abbr">
           CHA
         </button>
@@ -176,35 +176,27 @@
     <div class="exploration roll flex">
       <label class="inline-flex inline-flex-wide-label">
         <button type="roll" name="attr_rollListenDoor"
-          value="&{template:less} {{roll=@{character_name} checks ^{listen-at-door-full}}} {{result=[[ [[1d6]]<@{ListenDoor}+@{optionalModQuery} ]]}} {{check=[[@{ListenDoor}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} checks ^{listen-at-door-full}}} {{result=[[ [[1d6cf1cs6]]+@{optionalModQuery} ]]}} {{check=[[@{ListenDoor}]]}} {{raw_roll=$[[0]]}}"
           data-i18n="listen-at-door">
-          Listen at door
+          Listen
         </button>
-        <input type="number" min="1" max="6" name="attr_ListenDoor" value="1" />
-      </label>
-      <label class="inline-flex inline-flex-wide-label">
-        <button type="roll" name="attr_rollOpenDoor"
-          value="&{template:less} {{roll=@{character_name} checks ^{open-stuck-door-full}}} {{result=[[ [[1d6]]<@{OpenDoor}+@{optionalModQuery} ]]}} {{check=[[@{OpenDoor}+@{optionalModQuery}]]}}"
-          data-i18n="open-stuck-door">
-          Open stuck door
-        </button>
-        <input type="number" min="1" max="6" name="attr_OpenDoor" value="1" />
+        <input type="number" min="1" max="6" name="attr_ListenDoor" value="6" />
       </label>
       <label class="inline-flex inline-flex-wide-label">
         <button type="roll" name="attr_rollFindSecretDoor"
-          value="&{template:less} {{roll=@{character_name} checks ^{find-secret-door-full}}} {{result=[[ [[1d6]]<@{FindSecretDoor}+@{optionalModQuery} ]]}} {{check=[[@{FindSecretDoor}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} checks ^{find-secret-door-full}}} {{result=[[ [[1d6cf1cs6]]+@{optionalModQuery} ]]}} {{check=[[@{FindSecretDoor}]]}} {{raw_roll=$[[0]]}}"
           data-i18n="find-secret-door">
-          Find secret door
+          Search
         </button>
         <input type="number" min="1" max="6" name="attr_FindSecretDoor" value="1" />
       </label>
       <label class="inline-flex inline-flex-wide-label">
         <button type="roll" name="attr_rollFindRoomTrap"
-          value="&{template:less} {{roll=@{character_name} checks ^{find-room-trap-full}}} {{result=[[ [[1d6]]<@{FindRoomTrap}+@{optionalModQuery} ]]}} {{check=[[@{FindRoomTrap}+@{optionalModQuery}]]}}"
+          value="&{template:greater} {{roll=@{character_name} checks ^{find-room-trap-full}}} {{result=[[ [[1d6cf1cs6]]+@{optionalModQuery} ]]}} {{check=[[@{FindRoomTrap}]]}} {{raw_roll=$[[0]]}}"
           data-i18n="find-room-trap">
-          Find room trap
+          Survival
         </button>
-        <input type="number" min="1" max="6" name="attr_FindRoomTrap" value="1" />
+        <input type="number" min="1" max="6" name="attr_FindRoomTrap" value="6" />
       </label>
     </div>
   </div>
@@ -1268,15 +1260,25 @@
     <h3>{{roll}}</h3>
     <span style="background: white; display: none;">{{check}}</span>
     <span style="background: white;">{{result}}</span>
-    {{#rollLess() result check}}
-    <span class="rollresult rollfail" data-i18n="fail">Fail</span>
-    {{/rollLess() result check}}
-    {{#rollGreater() result check}}
-    <span class="rollresult rollsuccess" data-i18n="success">Success</span>
-    {{/rollGreater() result check}}
-    {{#rollTotal() result check}}
-    <span class="rollresult rollsuccess" data-i18n="success">Success</span>
-    {{/rollTotal() result check}}
+    {{#^rollWasFumble() raw_roll}}
+      {{#^rollWasCrit() raw_roll}}
+        {{#rollLess() result check}}
+        <span class="rollresult rollfail" data-i18n="fail">Fail</span>
+        {{/rollLess() result check}}
+        {{#rollGreater() result check}}
+        <span class="rollresult rollsuccess" data-i18n="success">Success</span>
+        {{/rollGreater() result check}}
+        {{#rollTotal() result check}}
+        <span class="rollresult rollsuccess" data-i18n="success">Success</span>
+        {{/rollTotal() result check}}
+      {{/^rollWasCrit() raw_roll}}
+    {{/^rollWasFumble() raw_roll}}
+    {{#rollWasFumble() raw_roll}}
+    <span class="rollresult rollfail" data-i18n="fumble">Fumble</span>
+    {{/rollWasFumble() raw_roll}}
+    {{#rollWasCrit() raw_roll}}
+    <span class="rollresult rollsuccess" data-i18n="crit">Critical Success</span>
+    {{/rollWasCrit() raw_roll}}
   </div>
 </rolltemplate>
 
