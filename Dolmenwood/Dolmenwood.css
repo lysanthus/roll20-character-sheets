@@ -199,7 +199,7 @@ div.sheet-flex > .sheet-shrink {
 .sheet-inline-flex > button:first-of-type,
 .sheet-inline-flex > span:first-of-type,
 .sheet-inline-flex > *:first-child {
-  flex-grow: 0;
+  flex-grow: 1;
   margin: 0;
 }
 
@@ -210,7 +210,7 @@ div.sheet-flex > .sheet-shrink {
 .charsheet .sheet-inline-flex-wide-label > *:first-child,
 .charsheet .sheet-inline-flex-wide-label > span:first-child,
 .charsheet .sheet-inline-flex-wide-label > button:first-child {
-  flex-grow: 3;
+  flex-grow: 2;
 }
 
 /* Info Grid / Header */
@@ -595,7 +595,7 @@ input[name="attr_spellRollType"][value="describe"]
 /* Ability Scores */
 
 .sheet-scores input[type="number"] {
-  max-width: 3.5rem;
+  max-width: 5rem;
 }
 
 /* Spells per Level */
