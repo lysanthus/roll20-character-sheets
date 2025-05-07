@@ -182,7 +182,7 @@
           data-i18n="find-secret-door">
           Search
         </button>
-        <input type="number" min="1" max="6" name="attr_FindSecretDoor" value="1" />
+        <input type="number" min="1" max="6" name="attr_FindSecretDoor" value="6" />
       </label>
       <label class="inline-flex inline-flex-wide-label">
         <button type="roll" name="attr_rollFindRoomTrap"
@@ -1539,13 +1539,13 @@
   on("sheet:opened change:cha", function () {
     getAttrs(["cha"], function (values) {
       const [chaMod, retainersMax, retainersLoyalty] = getModifiers(values.cha, [
-        [-2, 1, 4],
-        [-1, 2, 5],
+        [-3, 1, 4],
+        [-2, 2, 5],
         [-1, 3, 6],
         [0, 4, 7],
         [1, 5, 8],
-        [1, 6, 9],
-        [2, 7, 10]
+        [2, 6, 9],
+        [3, 7, 10]
       ]);
       setAttrs({ chaMod, retainersMax, retainersLoyalty })
     })
