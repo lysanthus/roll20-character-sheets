@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "html": "Dolmenwood.html",
   "css": "Dolmenwood.css",
   "authors": "Lysanthus",
@@ -22,6 +23,16 @@
       ]
     },
     {
+=======
+  "html": "dolmenwood.html",
+  "css": "dolmenwood.css",
+  "authors": "Sharper044",
+  "roll20userid": "6966273",
+  "preview": "preview.png",
+  "instructions": "Dolmenwood Official character sheet. For more information see [Necrotic Gnome](https://necroticgnome.com/pages/about-dolmenwood).",
+  "useroptions": [
+    {
+>>>>>>> 774136330f2346a5f9a903b715d2df111f408239
       "attribute": "sheetTab",
       "displayname": "Default Character Type",
       "displaytranslationkey": "default-character-type",
@@ -48,6 +59,7 @@
         "enabled",
         "disabled"
       ]
+<<<<<<< HEAD
     },
     {
       "attribute": "individualInitiative",
@@ -66,4 +78,9 @@
     }
   ],
   "legacy": true
+=======
+    }
+  ],
+  "legacy": false
+>>>>>>> 774136330f2346a5f9a903b715d2df111f408239
 }

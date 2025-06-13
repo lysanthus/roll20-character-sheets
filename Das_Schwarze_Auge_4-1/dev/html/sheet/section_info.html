@@ -7,12 +7,313 @@
 		</p>
 		<h3>Infos zum Charakterbogen</h3>
 		<p>Dieser Charakterbogen wird weiterentwickelt. Dabei bleibt es nicht aus, dass alte Daten nicht mehr ohne Weiteres in den veränderten Bogen passen. Wenn es nötig wird, werden die alten Daten automatisch im Hintergrund umgewandelt. Da es aber immer zu Fehlern kommen kann, stehen für jeden Versionssprung hier weiterhin die alten Daten (inklusive ihrer Funktionalität) zur Verfügung. So wird sichergestellt, dass keine Daten verlorengehen und das Spiel weitergehen kann.</p>
-		<p>Zu besonderen Updates&nbsp;&ndash;&nbsp;sprich: alles, was über einfache Fehlerbehebungen und eher kleine kosmetische Veränderungen hinausgeht&nbsp;&ndash;&nbsp;gibt es in der Regel, wenn auch nicht immer pünktlich zum Release einer neuen Charakterbogenversion, Videos mit vielen Details: <br>
+		<p>Zu besonderen Updates&nbsp;&ndash;&nbsp;sprich: alles, was über die bloße Erweiterung bestehender Features, einfache Fehlerbehebungen und eher kleine kosmetische Veränderungen hinausgeht&nbsp;&ndash;&nbsp;gibt es in der Regel, wenn auch nicht immer pünktlich zum Release einer neuen Charakterbogenversion, Videos mit vielen Details. Die Playlist liegt unter folgender Adresse: <br>
 				<input type="text" class="selectable-text" style="width: 52em" value="https://www.youtube.com/watch?v=l2SCwz51T9g&amp;list=PLGBXxa8pcNCqzNe4CrKvy-_QgjfgLDOZ-">
 		</p>
-		<p>Änderungen &bdquo;unter der Haube&ldquo; erspare ich euch an dieser Stelle. Wer Interesse daran hat, findet all die Infos auf GitHub (siehe oben). Bei Bedarf könnt ihr auch gerne fragen: &bdquo;Isurandil&ldquo; auf (in stark fallender Lesehäufigkeit) Orkenspalter, Mastodon (@Isurandil@mastodon.online), Twitter, YouTube und Roll20.</p>
+		<p>In der Überschrift zu den einzelnen Versionen zeigt ein Filmklappen-Emoji (&#x1f3ac;) an, dass ein Link zum entsprechenden Video angegeben ist.</p>
+		<p>Änderungen &bdquo;unter der Haube&ldquo; erspare ich euch an dieser Stelle. Wer Interesse daran hat, findet all die Infos auf GitHub (siehe oben). Bei Bedarf könnt ihr auch gerne fragen: &bdquo;Isurandil&ldquo; auf (in stark fallender Lesehäufigkeit) Orkenspalter, Mastodon (@Isurandil@mastodon.online), YouTube und Roll20.</p>
 
 		<details open>
+			<summary>
+				<h4>Update auf Version 20250413</h4>
+			</summary>
+			<h5>Neue Features</h5>
+			<ul>
+				<li>
+					<span class="highlight">Nachtalbische Repräsentation:</span> Das Auswahlfeld für die (aventurischen) Repräsentationen kennt jetzt den vordefinierten Eintrag &bdquo;Nab: nachtalbische Repräsentation&ldquo;. Die Wahl dieser Repräsentation hat keine regeltechnischen Auswirkungen und hat daher rein kosmetischen Wert.</li>
+			</ul>
+			<h5>Design</h5>
+			<p>
+				<ul>
+					<li><span class="highlight">Fertigkeiten:</span> Der Tab &bdquo;Fertigkeiten&ldquo; heißt jetzt &bdquo;V/N &amp; SF&ldquo; mit einem entsprechenden Titel.</li>
+					<li><span class="highlight">Fertigkeiten:</span> Zur Vereinheitlichung des Erscheinungsbildes von Hinweistexten sind die eingeklammerten Fragezeichen dem Infosymbol (&#x2139;&#xfe0f;) gewichen.</li>
+					<li><span class="highlight">Magie:</span> Der Untertab &bdquo;Fertigkeiten&ldquo; heißt jetzt &bdquo;V/N &amp; SF&ldquo; mit einem entsprechenden Titel.</li>
+					<li><span class="highlight">Kampf:</span> Der Untertab &bdquo;V/N &amp; SF&ldquo; heißt jetzt &bdquo;SF&ldquo; mit einem entsprechenden Titel.</li>
+					<li><span class="highlight">Regeneration:</span> Waren &bdquo;Astrale Meditation&ldquo; oder &bdquo;Karmale Meditation&ldquo; ausgewählt und wurden dann die entsprechenden Bereiche über die Konfiguration versteckt, erschien das Tab &bdquo;Regeneration&ldquo; beim nächsten Aufruf leer. Nun wird in diesem Fall das Untertab &bdquo;Schlafen&ldquo; automatisch ausgewählt.</li>
+				</ul>
+			</p>
+			<h5>Fehlerbehebungen</h5>
+			<p>
+				<ul>
+					<li><span class="highlight">Regeneration, Schlaf:</span> Der Abzug aus Entrückung bei der astralen Regeneration wird nun korrekt nur bei entsprechenden Charakteren angezeigt. Der Wert war nie definiert, weshalb es zu keinerlei Abzügen kam.</li>
+					<li><span class="highlight">Talente:</span> Der in der Wurfvorlage im Chat verwendete Name der Talente &bdquo;Fesseln/Entfesseln&ldquo;, &bdquo;Gerber/Kürschner&ldquo; und &bdquo;Steinschneider/Juwelier&ldquo; wurde nur bis vor dem Schrägstrich angezeigt.</li>
+					<li><span class="highlight">Migration auf Version 20250122:</span> Einige Werte (Lebensenergie, Ausdauer, Erschöpfung, Überanstrengung, Astralenergie, Karmaenergie) konnten unter bestimmten Umständen verlorengehen.</li>
+					<li><span class="highlight">Migration auf Version 20220604:</span> Bei der Korrektur der falschgeschriebenen Visibili-Attribute wird nun nicht mehr davon ausgegangen, dass diese überhaupt existieren. Dies beseitigt einen Abbruch der Migrationsfunktionen ausgehend von sehr alten (vor Mitte 2022) Charakteren.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20250122</h4>
+			</summary>
+			<h5>Neue Features</h5>
+			<p>Der Themenkomplex &bdquo;Regeneration&ldquo; hat reichlich Zuwachs erhalten: Fünf neue Regenerationsarten und ein Ausbau des Schlafes sorgen für eine weitestgehend vollständige Abdeckung aller Regenerationswünsche. Im Detail bedeutet dies:
+				<ul>
+					<li>
+						<span class="highlight">Neue Regenerationsart &bdquo;Luft holen&ldquo;:</span> Im Nah- und Fernkampf kann jetzt Luft geholt werden. Dieser Regenerationsknopf befindet sich ausschließlich in den Untertabs &bdquo;Nahkampf&ldquo; und &bdquo;Fernkampf&ldquo; des Tabs &bdquo;Kampf&ldquo;, da er außerhalb nicht sinnvoll verwendet werden kann.</li>
+					<li>
+						<span class="highlight">Neue Regenerationsart &bdquo;Ausruhen&ldquo;</span>
+						<ul>
+							<li>Diese Regenerationsart stellt eine kurze Form des Rastens dar, bei der nur kurz angehalten wird. Dadurch ist sie auf die Regeneration von Ausdauer beschränkt und auf unter 1&nbsp;<span class="abbr" title="Stunde">h</span> begrenzt.</li>
+							<li>Der optionale <span class="highlight">Automatikmodus</span> erspart Rechnerei.</li>
+						</ul>
+					</li>
+					<li>
+						<span class="highlight">Neue Regenerationsart &bdquo;Rasten&ldquo;</span>
+						<ul>
+							<li>Diese Regenerationsart stellt eine lange Form der Rast dar, die in Stunden gemessen wird. Ausdauer regeneriert sich dabei, während Erschöpfung, Überanstrengung und Entrückung abgebaut werden.</li>
+							<li>Der optionale <span class="highlight">Automatikmodus</span> erspart Rechnerei.</li>
+						</ul>
+					</li>
+					<li>
+						<span class="highlight">Regenerationsart &bdquo;Schlafen&ldquo;</span>
+						<ul>
+							<li>Schlaf berücksichtigt jetzt auch die <span class="highlight">Schlafdauer</span> und regeneriert Ausdauer, Lebensenergie, Astralenergie und Karmaenergie und wirkt beim Auf- und Abbau von Erschöpfung, Überanstrengung und Entrückung mit.</li>
+							<li>Die astrale Regeneration berücksichtigt den Einfluss der Entrückung.</li>
+							<li>Der <span class="highlight">Bann des Eisens</span> wird nun ebenfalls vollständig berücksichtigt.</li>
+						</ul>
+					</li>
+					<li>
+						<span class="highlight">Neue Regenerationsart &bdquo;Astrale Meditation&ldquo;</span>
+						<ul>
+							<li>Bei dieser Regenerationsart entscheidet eine 3<span class="abbr" title="zwanzigseitiger Würfel">W20</span>-Probe über die grundsätzliche Durchführung der Meditation. Für diese Probe werden als Erleichterung Ritualkenntnis, Musizieren und Selbstbeherrschung berücksichtigt.</li>
+							<li>Daneben sind die Einnahme von <span class="highlight">Thonnys</span>, die Kenntnis der <span class="highlight">Sonderfertigkeit &bdquo;Astrale Meditation&ldquo;</span>, die Nähe zu <span class="highlight">Kraftlinien/-knoten</span> während der Meditation und die <span class="highlight">Meditation im Limbus</span> abgedeckt.</li>
+							<li>Mittels eines <span class="highlight">&bdquo;Maximum&ldquo;-Knopfs</span> kann das Umwandlungsziel so gesetzt werden, dass die Astralenergie nach Abschluss der Meditation in jedem Fall voll ist.</li>
+							<li>Auch hier gibt es einen optionalen <span class="highlight">Automatikmodus</span>, der allerdings eine <span class="highlight">ausgewogene Regeneration</span> abhängig von den Ständen an Lebens- und Astralenergie anstrebt.</li>
+							<li><span class="highlight">Versehentliches &bdquo;Zutodemeditieren&ldquo;</span> wird durch feste Lebensenergieuntergrenzen sichergestellt.</li>
+							<li>Diese Regenerationsart wird nur angezeigt, wenn auch das Tab &bdquo;Magie&ldquo; eingeblendet wird.</li>
+						</ul>
+					</li>
+					<li>
+						<span class="highlight">Neue Regenerationsart &bdquo;Karmale Meditation&ldquo;</span>
+						<ul>
+							<li>Es werden sämtliche Modifikatoren berücksichtigt.</li>
+							<li>Die Durchführung dieser Regeneration erhöht in entsprechendem Maße auch die Entrückung.</li>
+							<li>Diese Regenerationsart wird nur angezeigt, wenn auch das Tab &bdquo;Götterwirken&ldquo; eingeblendet wird.</li>
+						</ul>
+					</li>
+					<li>Für alle Regenerationsarten gilt: Es werden nur jene Werte angezeigt, die durch die Regeneration geändert werden können. Wer also mit voller Lebensenergie schläft, sieht dabei keine Lebensenergieregeneration. Zudem gibt es teils <span class="highlight">umfangreiche Hilfetexte</span> direkt bei den jeweiligen Optionen.</li>
+					<li>Die folgenden Vor- und Nachteile mit Auswirkungen auf die Regeneration wurden hinzugefügt: <span class="highlight">&bdquo;eisenaffine Aura&ldquo;</span>, <span class="highlight">&bdquo;Unverträglichkeit mit verarbeitetem Metall&ldquo;</span> und <span class="highlight">&bdquo;zäher Hund&ldquo;</span>.</li>
+				</ul>
+			</p>
+			<h5>Design</h5>
+			<p>
+				<ul>
+					<li><span class="highlight">Regeneration, Schlaf:</span> Aufteilung bei Lebens- und Astralenergie verfeinert</li>
+					<li>Der <span class="highlight">Debug-Modus</span> kann jetzt ohne &bdquo;geheimen&ldquo; Text für den Stand des Charakters über die Konfiguration direkt eingeschaltet werden. Er steht damit quasi allen Nutzen sehr viel leichter zu Verfügung, auch wenn die Aktivierung keinen spielerischen Mehrwert bietet.</li>
+					<li>Die <span class="highlight">Optionen &bdquo;Verstecke Erschöpfung&ldquo;</span> und <span class="highlight">&bdquo;Verstecke Überanstrengung&ldquo;</span> wurden mit Hinweisen versehen und umbenannt zu &bdquo;Deaktiviere Erschöpfung&ldquo; und &bdquo;Deaktiviere Überanstrengung&ldquo;, um die Auswirkungen der jeweiligen Optionen besser widerzuspiegeln.</li>
+				</ul>
+			</p>
+			<h5>Fehlerbehebungen</h5>
+			<p>
+				<ul>
+					<li>Die Voraussetzung &bdquo;Meisterparade&ldquo; für <span class="highlight">&bdquo;Entwaffnen&ldquo;</span> wird nicht mehr automatisch vom Charakterbogen durchgesetzt, da es Ausnahmen von dieser Regel gibt, die momentan zu aufwendig zu implementieren sind.</li>
+					<li>Würfelknöpfe für die Sprachen <span class="highlight">&bdquo;Füchsisch&ldquo;</span>, <span class="highlight">&bdquo;Waldmenschen-Sprachen&ldquo;</span> und <span class="highlight">&bdquo;Zyklopäisch&ldquo;</span> funktionieren jetzt wieder. Im Rahmen dieser Fehlerbehebung wurden auch sämtliche anderen Würfelknöpfe automatisiert geprüft, sodass jetzt alle Würfelknöpfe funktionieren sollten.</li>
+					<li>Die internen Werte für &bdquo;schelmische Repräsentation&ldquo; und &bdquo;scharlatanische Repräsentation&ldquo; in der Repräsentationswahl im Untertab &bdquo;Zauberbogen&ldquo; des Tabs &bdquo;Magie&ldquo; sind nicht mehr vertauscht.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20241002</h4>
+			</summary>
+			<h5>Neue Features</h5>
+			<p>
+				<ul>
+					<li>
+						<span class="highlight">Automatischer Abzug von Projektilen</span> bei Fernkampfproben
+						<!-- Legacy Button (due to name) -->
+						<button name="FK" type="roll" value="@{rc_attack_action}" class="default-hide"></button>
+					</li>
+					<li>Neue Talente hinzugefügt: <span class="highlight">&bdquo;Freies Fliegen&ldquo;</span> (Körper) und <span class="highlight">&bdquo;Fluggerätesteuern&ldquo;</span> (Handwerk)</li>
+					<li>Neue Kampftechniken hinzugefügt: <span class="highlight">&bdquo;Bastardstäbe&ldquo;</span> (Myranor, Dunkle Zeiten; immer sichtbar) und <span class="highlight">&bdquo;Feuerwaffen&ldquo;</span> (nur Myranor)</li>
+				</ul>
+			</p>
+			<h5>Design</h5>
+			<p>
+				<ul>
+					<li><span class="highlight">Abzüge auf AT/PA durch hohe BE</span> werden jetzt durch ein Fels-Emoji (&#x1faa8;) angezeigt</li>
+					<li>Myranischen Alias <span class="highlight">&bdquo;Bela&ldquo;</span> für Armbrüste hinzugefügt</li>
+					<li>Tab &bdquo;Kampf&ldquo;, Untertab &bdquo;V/N &amp; SF&ldquo;: Hinweis auf &bdquo;neuen&ldquo; Ort der vom Charakterbogen unterstützten Vor- und Nachteile entfernt</li>
+					<li>Tab &bdquo;Kampf&ldquo;, Untertab &bdquo;V/N &amp; SF&ldquo;: Überschrift entfernt</li>
+					<li>Tab &bdquo;Kampf&ldquo;, Untertab &bdquo;V/N &amp; SF&ldquo;: Hinweise auf <span class="highlight">Grad der charakterbogenseitigen Berücksichtigung</span> der aufgelisteten Kampfsonderfertigkeiten hinzugefügt</li>
+				</ul>
+			</p>
+			<h5>Fehlerbehebungen</h5>
+			<p>
+				<ul>
+					<li>Texte der Infoboxen in ausgeklappten Myranorbeschwörungszaubern an die realen Verhältnisse angeglichen</li>
+					<li>Konsistente Verwendung von &bdquo;Sinnenschärfe&ldquo;</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>&#x1f3ac; Update auf Version 20240901</h4>
+			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=MzBODgVReOU"></p>
+			<h5>Neues Feature: Myranische Beschwörungszauber</h5>
+			<p>
+				<ul>
+					<li><span class="highlight">Myranische Beschwörungszauber</span> können jetzt im neuen <span class="highlight">Untertab &bdquo;Beschwörung&ldquo;</span> im Tab &bdquo;Magie&ldquo; angelegt werden. <span class="highlight">Nur sichtbar, wenn in Konfiguration &bdquo;Verstecke Myranor&ldquo; deaktiviert ist.</span></li>
+					<li>Im entsprechenden Bereich können <span class="highlight">beliebig viele Zauber</span> mit <span class="highlight">beliebigen Einstellungen</span> hinzugefügt werden.</li>
+					<li>Zu jedem Zauber gibt es eine Übersichtszeile und ausklappbare Details, die Änderungen gestatten. Darüber hinaus gibt es viele Komfortfunktionen:
+						<ul>
+							<li>Die Textfelder für Quellen, Kategorien und Repräsentationen können auf Basis einer <span class="highlight">Vorauswahl oder frei festgelegt</span> werden. Das erste Wort der Repräsentation eines Zaubers wird als <span class="highlight">Kürzel der Repräsentation</span> verwendet.</li>
+							<li>Wurde eine Erstrepräsentation erkannt, so wird die Repräsentation des Zaubers bei der ersten Änderung eines Details außer der <span class="highlight">Repräsentation automatisch auf die Erstrepräsentation</span> gesetzt.</li>
+							<li>Die Sphäre wird <span class="highlight">automatisch</span> auf Basis der Quelle gewählt, die sich daraus ergebenden <span class="highlight">Probeneigenschaften</span> ebenfalls. Eigene Sphären sind nicht möglich.</li>
+							<li>Der <span class="highlight">Name für den Würfelknopf</span> wird ebenfalls automatisch ausgefüllt und lässt sich händisch anpassen.</li>
+							<li>Automatismen stellen sicherheitshalber den Dienst ein, wenn händische Einträge verwendet werden.</li>
+							<li>So sind <span class="highlight">eigene Quellen, Kategorien, Repräsentationen, Probeneigenschaften und Würfelknopfnamen</span> möglich.</li>
+						</ul>
+					</li>
+					<li>Der Mechanismus zur <span class="highlight">automatischen Ersetzung von Probeneigenschaften</span> aufgrund der Repräsentation berücksichtigt jetzt auch die <span class="highlight">neristische Repräsentation (Ner)</span>.</li>
+					<li>Anders als bei der aktuellen Implementation der Metatalente oder Gaben lassen sich die <span class="highlight">Würfelknöpfe in die Makroleiste</span> ziehen. Dort erhalten sie dann zwar einen unverständlichen internen Namen, lassen sich aber umbenennen.</li>
+					<li>Die Beschreibung im Hinweis der &bdquo;Verstecke Myranor&ldquo;-Option wurde entsprechend angepasst.</li>
+					<li>Vielen Dank an Rondragos, dessen Pull Request den Stein des Anstoßes geliefert hat, um mich mit myranischer Beschwörungsmagie zu befassen und diese einzubauen.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20240808</h4>
+			</summary>
+			<h5>Fehlerbehebungen</h5>
+			<p>
+				<ul>
+					<li>Würfelknöpfe für Schriften sind jetzt nicht mehr funktionslos. Es ist mir ein Rätsel, wie mir das bei den Tests der letzten Version durchgehen konnte.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20240625</h4>
+			</summary>
+			<h5>Talente</h5>
+			<p>
+				<ul>
+					<li>Die Talente &bdquo;Immanspiel&ldquo; und &bdquo;Sprache der Blumen&ldquo; können jetzt genutzt werden.</li>
+				</ul>
+			</p>
+			<h5>Myranor</h5>
+			<p>
+				<ul>
+					<li>Myranorinhalte sind <span class="highlight">standardmäßig ausgeblendet</span>. Sie können eingeblendet werden über die Option <span class="highlight">&bdquo;Verstecke Myranor&ldquo;</span> im Bereich <span class="highlight">&bdquo;Oberfläche und Aussehen&ldquo;</span> im Tab <span class="highlight">&bdquo;Konfiguration&ldquo;</span>.</li>
+					<li><span class="highlight">Inventar</span>: Währung des &bdquo;Imperium Myranum&ldquo; ist jetzt im Untertab &bdquo;Geldbeutel&ldquo; des Tabs &bdquo;Inventar&ldquo; verfügbar. Dank an Rondragos für die ursprüngliche Version dieses Beitrags.</li>
+					<li><span class="highlight">Sprachen und Schriften</span>: Sämtliche Sprachen und Schriften aus Myranor (aus &bdquo;Wege nach Myranor&ldquo; und &bdquo;Myranische Meere&ldquo;) sind jetzt wählbar. Sprachen und Schriften, die auch in Aventurien verfügbar sind, zählen auch für die Myranorvarianten. Abweichungen der Bezeichnungen wie beispielsweise bei &bdquo;Aureliani&ldquo; (Aventurien) und &bdquo;Alt-Imperial/Alt-Güldenländisch&ldquo; (Myranor) werden ebenfalls berücksichtigt, nutzen aber alle denselben Talentwert. Dank an Rondragos für die ursprüngliche Version dieses Beitrags.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20240612</h4>
+			</summary>
+			<h5>Fehlerbehebung</h5>
+			<p>
+				<ul>
+					<li>Fehler beim Würfeln von Talenten ohne eBE behoben, der dazu geführt hat, das sämtliche Werte zusammengezählt wurden.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20240609</h4>
+			</summary>
+			<h5>Design</h5>
+			<p>
+				<ul>
+					<li>Info zu &bdquo;Mod&ldquo;-Spalte im Tab &bdquo;Grundwerte&ldquo;: Da diese Spalte eine andere Funktion hat als auf dem offiziellen Papiercharakterbogen, wurde bereits vor langer Zeit ein Fehler bei Roll20 gemeldet. Im Rahmen der Diskussion kam heraus, dass die Benennung der Spalte die Ursache des Problems darstellt. Vorerst wird dem damit abgeholfen, dass die Spalte nun über eine Erklärung verfügt.</li>
+					</li>
+					<li>Würfelvorlage für Betafeature &bdquo;Bestätigungswürfe im Kampf einzeln/manuell würfeln&ldquo;: Die Würfelvorlage enthält jetzt weniger überflüssige oder nur für interne Zwecke sinnvolle Informationen, sodass der Spielwert deutlich gesteigert sein dürfte.</li>
+				</ul>
+			</p>
+			<h5>Internes</h5>
+			<p>
+				<ul>
+					<li><span class="abbr" title="Cascading Stylesheet">CSS</span>-Dateigröße durch Entfernung von Redundanzen um über 40% reduziert. Dank an Pascal Stein für die ursprüngliche Version dieses Beitrags.</li>
+					<li>Code für Talentwürfe mit und ohne effektiver Behinderung zusammengefasst. Dank an Pascal Stein für die ursprüngliche Version dieses Beitrags.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>Update auf Version 20240519</h4>
+			</summary>
+			<h5>Design</h5>
+			<p>
+				<ul>
+					<li>Tab &bdquo;Info&ldquo;: Updates, zu denen ein Video erschienen ist, sind nun mit einem Filmklappen-Emoji markiert und der Link zum Video ist angegeben.</li>
+					</li>
+				</ul>
+			</p>
+			<h5>Fehlerbehebungen</h5>
+			<p>
+				<ul>
+					<li>Repräsentationen: Einige Zauber haben die beim Zauber angegebene Repräsentation ignoriert und damit keine Eigenschaften ersetzt. Nun sollten sämtliche Zauber wie erwartet funktionieren.
+						<ul>
+							<li>Die betroffenen Zauber waren: Animatio, Auris Nasus Oculus, Band und Fessel, Beherrschung brechen, Bewegung stören, Dichter und Denker, Eigenschaft wiederherstellen, Elementarer Diener, Flim Flam, Fluch der Pestilenz, Gefäß der Jahre, Harmlose Gestalt, Hartes schmelze, Heilkraft bannen, Hellsicht trüben, Höllenpein, Illusion auflösen, Klarum Purum, Körperlose Reise, Kraft des Erzes, Limbus versiegeln, Madas Spiegel, Magischer Raub, Metamagie neutralisieren, Metamorpho Felsenform, Metamorpho Gletscherform, Murks und Patz, Objecto obscuro, Objekt entzaubern, Pestilenz erspüren, Ruhe Körper, Schleier der Unwissenheit, Seelentier erkennen, Staub wandle, Stimmen des Windes, Tempus Stasis, Unberührt, Veränderung aufheben, Verständigung stören, Verwandlung beenden, Wand aus Flammen, Warmes Blut, Warmes Gefriere, Weiches erstarre.</li>
+							<li>Einige weitere Zauber waren zwar vom selben Fehler betroffen, der sich auf diese aber nicht ausgewirken konnte, da ohnehin keine Eigenschaften ersetzt werden konnten: Ängste lindern, Auge des Limbus, Bärenruhe, Beschwörung vereiteln, Böser Blick, Dämonenbann, Eigne Ängste, Einfluss bannen, Eins mit der Natur, Erinnerung verlasse dich, Granit und Marmor, Herbeirufung vereiteln, Herr über das Tierreich, Herzschlag ruhe, Hilfreiche Tatze, Iribaars Hand, Komm Kobold Komm, Krabbelnder Schrecken, Krähenruf, Kraft des Humus, Krötensprung, Lach dich gesund, Langer Lulatsch, Last des Alters, Levthans Feuer, Lunge des Leviatan, Paralysis, Satuarias Herrlichkeit, Schadenszauber bannen, Stein wandle, Sumus Elixiere, Tiere besprechen, Tlalucs Odem, Totes handle, Unsichtbarer Jäger, Weisheit der Bäume, Zorn der Elemente, Zunge lähmen.</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
+			<summary>
+				<h4>&#x1f3ac; Update auf Version 20240510</h4>
+			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=y_SQMOk_Oe8"></p>
+			<h5>Neues Feature: Repräsentationen für Zauber</h5>
+			<p>
+				<ul>
+					<li>Für jeden Zauber kann die dazugehörige Repräsentation angegeben werden. Wählbar sind alle Repräsentationen der Jetztzeit, alle Repräsentationen der Dunklen Zeiten und ein Platzhalter für Magiedilettanten: Ach, Bor, Dil, Dru, Elf, Geo, Hex, Mag, Srl und Sch; Alh, Geo/Dru, Gro, Gül, Kop, Mud und Sat. Außergewöhnliche Repräsentationen wie jene der Drachen, der Krakonier oder der Schratigen stehen nicht zur Wahl.</li>
+					<li>Es können auch eigene Repräsentationen eingetragen werden, weshalb die außergewöhnlichen Repräsentationen so ebenfalls eingetragen werden können. <span class="highlight">Regeltechnisch berücksichtigt</span> werden aktuell jedoch nur <span class="highlight">Ach, Elf und Kop</span>.</li>
+					<li>Allen drei Repräsentationen ist gemein, dass <span class="highlight">in der Zauberprobe Eigenschaften ersetzt</span> werden dürfen. Beim Würfeln der Probe wählt der Charakterbogen stets die <span class="highlight">günstigsten Eigenschaften für den Wurf automatisch</span> aus.</li>
+					<li>Es sind stets mehrere Repräsentationseinträge möglich, dabei gilt es jedoch die folgenden Punkte zu beachten:
+						<ul>
+							<li>Im Untertab &bdquo;Zauberbogen&ldquo; im Tab &bdquo;Magie&ldquo; können frei die bekannten Repräsentationen eingetragen werden. Wer aus der vorgefertigten Liste wählt, wird feststellen, dass stets nur die Kürzel verwendet werden. Mehrere Repräsentationen können manuell hinzugefügt werden. Weitere Repräsentationen müssen in irgendeiner Form getrennt von der <span class="highlight">erstgenannten Repräsentation</span> sein, damit diese erkannt wird. Die erstgenannte Repräsentation wird als Standardwert für sämtliche Zauber verwendet, deren Feld &bdquo;Repräsentation&ldquo; leer ist.</li>
+							<li>Jeder einzelne Spruch kann eine eigene Repräsentation zugewiesen bekommen, um einzelne Zauber in Fremdrepräsentationen abzubilden.</li>
+						</ul>
+					</li>
+				</ul>
+			</p>
+			<h5>Design</h5>
+			<p>
+				<ul>
+					<li>Regeneration: Die Darstellung ist jetzt <span class="highlight">kompakter und klarer</span>.
+						<ul>
+							<li>Details zu den jeweiligen Energien (Lebens-, Astral- und Karmaenergie) sind <span class="highlight">eingerückt und farblich</span> abgesetzt.</li>
+							<li>Sämtliche Zahlen in den jeweiligen Details verfügen jetzt über ein <span class="highlight">Vorzeichen und sind <span class="highlight">rechtsbündig</span>.</li>
+							<li>W20-Würfe verwenden beim Darüberfahren mit der Maus jetzt <span class="highlight">passende Farben</span> für die extremen Ergebnisse.</li>
+							<li>Die einzelnen Komponenten in verschiedenen Würfen sind jetzt beschrieben, sodass sich die <span class="highlight">Quelle eines Bonus oder Malus</span> leichter zuordnen lässt.</li>
+						</ul>
+					</li>
+					<li>Das Auswahlmenü für die <span class="highlight">Leiteigenschaft ist umgezogen</span>: Früher war das Menü Teil des Textes der magischen Sonderfertigkeit &bdquo;Meisterliche Regeneration&ldquo;, jetzt findet es sich neben dem Feld für die Repräsentationen.</li>
+					<li>Die <span class="highlight">Schriftgröße der Beschriftungen der Knöpfe für Spezialisierungen</span> passt jetzt zu denen der anderen Würfelknöpfe.</li>
+				</ul>
+			</p>
+			<h5>Fehlerbehebungen</h5>
+			<p>
+				<ul>
+					<li>Der Tab &bdquo;Regeneration&ldquo; lässt sich nun <span class="highlight">ordentlich anklicken und nutzen</span>, ohne dass der Tab &bdquo;Allgemein&ldquo; dazwischenfunkt.</li>
+					<li>Die Regeneration der Astralenergie konnte unter bestimmten Umständen hängen. Initialisierung eines frischen Charakterbogens und die Migrationsfunktion bestehender Bögen wurde entsprechend überarbeitet.</li>
+					<li>Veränderungen an der Leiteigenschaft haben jetzt einen Effekt auf den Bonus aus &bdquo;Meisterliche Regeneration&ldquo;.</li>
+					<li>Die Talente für Mirakel+/Mirakel&#x2212; wurden <span class="highlight">2017 bereits versehentlich &bdquo;gelöscht&ldquo;</span>, indem der interne Name der Felder versehentlich umbenannt wurde. Es sind daher jetzt je zwei Textzeilen dafür verfügbar, die intern unterschiedliche Namen verwenden. Da diese Namen aber nicht benutzt werden, spielt dies keine Rolle, ermöglicht aber möglicherweise dem ein oder anderen <span class="highlight">alte Daten wieder verwenden zu können</span>. Irgendwann soll dieser gesamte Bereich vollständig überarbeitet und hübsch gemacht werden.</li>
+					<li>Der gewöhnliche/alte Würfelknopf für &bdquo;Passierschlag&ldquo; funktioniert nun genau so gut wie der dazugehörige Knopf aus dem Betatest. Wurde &bdquo;Aufmerksamkeit&ldquo; gewählt, wurde der Modifikator nicht korrekt berücksichtigt und eigentlich fehlschlagende Proben wurden als erfolgreich angezeigt. Ursache war ein <span class="highlight">nicht ausreichend maskiertes Komma</span> im Beschreibungstext, weshalb jetzt auch der vollständige Text &bdquo;Aufmerksamkeit, aber kein Kampfgespür&ldquo; sichtbar ist.</li>
+				</ul>
+			</p>
+		</details>
+
+		<details>
 			<summary>
 				<h4>Update auf Version 20240414</h4>
 			</summary>
@@ -115,8 +416,9 @@
 
 		<details>
 			<summary>
-				<h4>Update auf Version 20230618</h4>
+				<h4>&#x1f3ac; Update auf Version 20230618</h4>
 			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=vGTkwBy1uWE"></p>
 			<h5>Neues Betafeature &bdquo;Bestätigungswürfe im Kampf einzeln/manuell würfeln&ldquo;</h5>
 			<p>
 				<ul>
@@ -281,7 +583,7 @@
 			<button name="Selbstbeherrschung" type="roll" value="@{t_ko_selbstbeherrschung_action}"> <span>Selbstbeherrschung</span></button>
 			<button name="SichVerstecken" type="roll" value="@{t_ko_sichverstecken_action}"> <span>Sich verstecken</span></button><button name="SichVerstecken" type="roll" value="@{t_ko_sichverstecken-ebe_action}"> <span>BE−2</span></button>
 			<button name="Singen" type="roll" value="@{t_ko_singen_action}"> <span>Singen</span></button><button name="Singen" type="roll" value="@{t_ko_singen-ebe_action}"> <span>BE−3</span></button>
-			<button name="Sinnesscharfe" type="roll" value="@{t_ko_sinnenschaerfe_action}"> <span>Sinnesschärfe</span></button>
+			<button name="Sinnesscharfe" type="roll" value="@{t_ko_sinnenschaerfe_action}"> <span>Sinnenschärfe</span></button>
 			<button name="SkiFahren" type="roll" value="@{t_ko_skifahren_action}"> <span>Skifahren</span></button><button name="SkiFahren" type="roll" value="@{t_ko_skifahren-ebe_action}"> <span>BE−2</span></button>
 			<button name="StimmenImmitieren" type="roll" value="@{t_ko_stimmenimitieren_action}"> <span>Stimmenimitieren</span></button><button name="StimmenImmitieren" type="roll" value="@{t_ko_stimmenimitieren-ebe_action}"> <span>BE−4</span></button>
 			<button name="Tanzen" type="roll" value="@{t_ko_tanzen_action}"> <span>Tanzen</span></button><button name="Tanzen" type="roll" value="@{t_ko_tanzen-ebe_action}"> <span>BEx2</span></button>
@@ -759,8 +1061,9 @@
 
 		<details>
 			<summary>
-				<h4>Update auf Version 20220116</h4>
+				<h4>&#x1f3ac; Update auf Version 20220116</h4>
 			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=taCNRr3_08s"></p>
 			<h5>Einführung von Betafeatures</h5>
 			<p>
 				<ul>
@@ -958,16 +1261,19 @@
 
 		<details>
 			<summary>
-				<h4>Updates auf Version 20210415</h4>
+				<h4>&#x1f3ac; Updates auf Version 20210415</h4>
 			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=5sOdcxNbn2s"></p>
 			<p>Beim letzten Update habe ich versehentlich einen sehr ärgerlichen Fehler eingebaut, der verhindert hat, dass der TP-Würfel-Knopf von Nahkampfwaffen funktioniert. Mit dieser Version wurde dies behoben.</p>
 			<p><strong>Hinweis:</strong> Wer einen der Workarounds benutzt hat, sollte die im Zuge dessen angelegten Attribute &bdquo;TP_W_Aktiv&ldquo; und &bdquo;TP_Bonus_Aktiv&ldquo; wieder löschen. Mehr Infos dazu gibt es in einem Video.</p>
 		</details>
 
 		<details>
 			<summary>
-				<h4>Updates auf Versionen 20200809 und 20210413</h4>
+				<h4>&#x1f3ac; Updates auf Versionen 20200809 und 20210413</h4>
 			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=rqgyaCXuMUM"></p>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=le3ys6T389o"></p>
 			<p>Es werden zwar gewisse Migrationen durchgeführt, dabei aber keine größeren Umstellungen vorgenommen. Daher gibt es hier auch keine alten Daten, die möglicherweise gerettet werden müssten. :)</p>
 		</details>
 
@@ -980,8 +1286,9 @@
 
 		<details>
 			<summary>
-				<h4>Update auf Version 20190427</h4>
+				<h4>&#x1f3ac; Update auf Version 20190427</h4>
 			</summary>
+			<p>Video: <input type="text" class="selectable-text" style="width: 30em" value="https://www.youtube.com/watch?v=a6KadwTIcQY"></p>
 			<p>Gaben und Metatalente wurden verändert, sodass eine Migration der alten Daten notwendig wurde. Spalten für spezielle Erfahrungen (SE) wurden entfernt, da diese ausschließlich für die Steigerung relevant sind, Steigerungen aber seitens Roll20 nicht im Charakterbogen umgesetzt sein dürfen. Um die Information dauerhafter zu speichern, empfiehlt es sich die Notizen zu benutzen. Spezielle Erfahrungen in Metatalenten sind darüber hinaus nicht regelkonform.</p>
 			<h5>Gaben</h5>
 			<fieldset class="repeating_GabenTalente">
