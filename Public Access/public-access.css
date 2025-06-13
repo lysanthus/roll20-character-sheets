@@ -134,7 +134,7 @@ section section {
 div.column {
   flex: 1 1 0;
   padding-left: 1em;
-  padding-right; 1em;
+  padding-right: 1em;
 }
 
 div.column div {
@@ -152,7 +152,7 @@ div.title {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-left; auto;
+  margin-left: auto;
   margin-right: auto;
   min-height: 350px;
   text-align: center;
@@ -197,7 +197,7 @@ span.bolded {
 
 
 input[type="number"], input[type="text"], textarea, .largedialog textarea {
-  max-width: 95%:;
+  max-width: 95%;
   width: 95%;
 }
 
@@ -219,10 +219,6 @@ select {
 textarea.oneline {
   height: 25px;
   min-height: 25px;
-}
-
-#condition1-check, #condition2-check, #condition3-check {
-
 }
 
 #condition1-check:checked ~ #condition1-text, #condition2-check:checked ~ #condition2-text, #condition3-check:checked ~ #condition3-text {
